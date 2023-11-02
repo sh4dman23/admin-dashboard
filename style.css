@@ -307,8 +307,8 @@ span.username {
     color: #333;
 
     display: grid;
-    grid-template-columns: 3fr 1fr;
-    grid-template-rows: auto auto;
+    grid-template-columns: 3fr 1.3fr;
+    grid-template-rows: auto;
     gap: 2rem 1rem;
 }
 
@@ -321,7 +321,7 @@ span.username {
 
 .projects {
     grid-column: 1 / 2;
-    grid-row: 1 / span 3; /* last row is implicit so that the project container doesnt take up more space than it should in the first two */
+    grid-row: 1 / 2; /* last row is implicit so that the project container doesnt take up more space than it should in the first two */
 }
 
 .projects > .container {
@@ -367,8 +367,14 @@ span.username {
     gap: 1rem;
 }
 
+.right-sidebar {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: max-content max-content;
+    grid-gap: 2rem;
+}
+
 .announcements {
-    grid-column: 2 / 3;
     grid-row: 1 / 2;
 }
 
@@ -409,7 +415,6 @@ span.username {
 }
 
 .trending {
-    grid-column: 2 / 3;
     grid-row: 2 / 3;
 }
 
