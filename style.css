@@ -31,6 +31,8 @@ body {
     display: grid;
     grid-template-columns: calc(290rem / 16) 1fr;
     grid-template-rows: 10rem auto;
+
+    min-height: 100vh;
 }
 
 svg {
@@ -305,7 +307,7 @@ span.username {
     color: #333;
 
     display: grid;
-    grid-template-columns: 1fr calc(300rem / 16);
+    grid-template-columns: 3fr 1fr;
     grid-template-rows: auto auto;
     gap: 2rem 1rem;
 }
@@ -324,7 +326,7 @@ span.username {
 
 .projects > .container {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(35ch, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(35ch, 1fr));
     gap: 1rem;
 }
 
