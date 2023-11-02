@@ -1,0 +1,121 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700&display=swap');
+
+:root {
+    /* Color palette */
+    --header-color: #ffffff;
+    --background-color: #eff6ff;
+    --sidebar-color: #60a5fa;
+    --shadow-color: rgba(0, 0, 0, 0.2);
+}
+
+* {
+    font-family: "Roboto", "Arial", "Helvetica Neue", "Helvetica", "Lucida Sans", "Poppins", sans-serif;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+ul {
+    list-style: none;
+}
+
+body {
+    display: grid;
+    grid-template-columns: calc(300rem / 16) 1fr;
+    grid-template-rows: 10rem auto;
+    width: 100%;
+    height: 768px;
+}
+
+svg {
+    fill: black;
+    height: 1rem;
+    display: inline-block;
+}
+
+.header, .sidebar {
+    position: relative;
+    z-index: 2;
+}
+
+.header {
+    background-color: var(--header-color);
+    grid-column: 2 / 3;
+    grid-row: 1 / 2;
+    box-shadow: 0 1px 3px 2px var(--shadow-color);
+
+    display: grid;
+    grid-template: 1fr 1.5fr / 1fr;
+}
+
+.header > .top {
+    padding: 1rem 2rem;
+    display: grid;
+    grid-template-columns: minmax(250px, 2fr) 1fr; /* work here */
+}
+
+.sidebar, .sidebar-section ul {
+    display: grid;
+    justify-content: start;
+    grid-auto-flow: row;
+    grid-auto-rows: auto;
+    align-content: safe start;
+}
+
+.sidebar {
+    background-color: var(--sidebar-color);
+    color: #ffffff;
+    grid-column: 1 / 2;
+    grid-row: 1 / -1;
+    box-shadow: 1px 0 3px 1px var(--shadow-color);
+    padding: 2rem 0 0 1.5rem;
+    gap: 4rem;
+}
+
+.heading-big {
+    font-size: 2rem;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 1rem;
+}
+
+.sidebar svg {
+    fill: white;
+}
+
+.heading-big svg {
+    height: 2.5rem;
+}
+
+.sidebar-section ul {
+    margin-left: 0.5rem;
+    font-size: 1.2rem;
+    font-weight: 700;
+    gap: 1rem;
+}
+
+.sidebar-section ul svg {
+    height: 1.8rem;
+    justify-self: center;
+}
+
+.sidebar-section ul li {
+    width: 100%;
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: 1.5rem;
+    justify-items: start;
+    align-items: center;
+}
+
+.sidebar-section a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.main {
+    background-color: var(--background-color);
+    grid-column: 2 / 3;
+    grid-row: 2 / 3;
+}
